@@ -1,8 +1,11 @@
-"use-client"
-
+"use client"
+import { About } from "@/components/About"
 const page = () => {
   return (
-    <div>About</div>
+    <div className="relative">
+      <div className=" -z-[100]    feedback-gradient" />
+      <About />
+    </div>
   )
 }
 

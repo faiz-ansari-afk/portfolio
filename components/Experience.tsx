@@ -43,7 +43,7 @@ export const Experience = () => {
       y: 50,
       rotate: -10,
       transition: {
-        type: "spring",
+        type: "Spring",
         bounce: 0.4,
         duration: 0.8
       }
@@ -111,7 +111,7 @@ function convertToTimestamp(date:number):FirebaseDate  {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -200 }}
           transition={{ duration: 0.6 }}
-          className="pb-4  font-bold text-gradient  leading-wide text-6xl "
+          className="pb-4  font-bold text-gradient  leading-wide text-5xl md:text-6xl "
         >
           <span className="hover:text-gradient-reverse  hover:background-animate">
             Experiences
@@ -144,9 +144,11 @@ function convertToTimestamp(date:number):FirebaseDate  {
               console.log("totalMonth",totalMonth);
             return(
             <motion.li 
-            initial={{ opacity: 0 }}
+            variants={cardVariants}
+            initial={{ opacity: 0.5 }}
             whileInView={{ opacity: 1 }}
-            className={`${exp.end_date === 'present' && 'border border-lime-600 rounded-lg'} mb-10 ml-6`} key={index}>
+            viewport={{ once: false, amount: 0.8 }}
+            className={`${exp.end_date === 'present' && ' '} mb-10 ml-6`} key={index}>
               <span className="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -left-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
                 {exp.logo && (
                   <Image
@@ -157,11 +159,12 @@ function convertToTimestamp(date:number):FirebaseDate  {
                   />
                 )}
               </span>
-              <div className="relative items-start justify-between p-4 bg-white border border-gray-200 rounded-lg shadow-sm sm:flex dark:bg-gray-700 dark:border-gray-600">
-                {exp.notice_period && <span className={`${caveat.className} absolute text-rose-400 left-1 -top-1`}>serving notice period</span>}
+              <div className={`relative items-start justify-between p-4 bg-white border border-gray-200 rounded-lg shadow-sm sm:flex dark:bg-gray-700 dark:border-gray-600 ${exp.end_date === 'present' && 'green-box-shadow'}`}>
+              
+                {exp.notice_period && <span className={`${caveat.className} absolute text-rose-500 dark:text-rose-300 left-1 -top-1`}>serving notice period</span>}
                 <div className="text-sm font-normal text-gray-500  dark:text-gray-300">
                   <div className="flex justify-between flex-col md:flex-row">
-                    <h3 className="text-2xl font-bold tracking-wide">
+                    <h3 className="text-2xl md:text-3xl font-bold tracking-wide">
                       {exp.position} 
                     </h3>
                     <div className=' '>
@@ -220,9 +223,9 @@ function convertToTimestamp(date:number):FirebaseDate  {
                       </motion.li>
                     ))}
                   </ul>
-                  <div className='mt-5 flex gap-3 text-xs'>
+                  <div className='mt-5 flex gap-3 text-xs flex-wrap'>
                     {exp.stacks.map(stack=>(
-                      <p className="rounded-lg px-3 py-1 border dark:border-0  bg-background text-foreground text-xs" key={stack}>{stack}</p>
+                      <p className="rounded-lg flex-shrink-0 px-3 py-1 border dark:border-0  bg-background text-foreground text-xs" key={stack}>{stack}</p>
                     ))}
                     </div>
                 </div>
@@ -264,7 +267,7 @@ function convertToTimestamp(date:number):FirebaseDate  {
 
         <motion.li
         variants={cardVariants}
-        initial={{ opacity: 0 }}
+        initial={{ opacity: 0.5 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: false, amount: 0.8 }}
         className="mb-10 ml-6">
@@ -277,7 +280,7 @@ function convertToTimestamp(date:number):FirebaseDate  {
             />
           </span>
           <div className="items-start justify-between p-4 bg-white border border-gray-200 rounded-lg shadow-sm sm:flex dark:bg-gray-700 dark:border-gray-600">
-            <time className="mb-1 text-xs font-normal text-gray-400 sm:order-last sm:mb-0">
+            <time className="mb-1 text-xs font-normal text-gray-400 order-last sm:mb-0">
               2017 - 2021
             </time>
             <div className="text-sm font-normal text-gray-500 lex dark:text-gray-300">
@@ -299,7 +302,7 @@ function convertToTimestamp(date:number):FirebaseDate  {
         </motion.li>
         <motion.li
         variants={cardVariants}
-        initial={{ opacity: 0 }}
+        initial={{ opacity: 0.5 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: false, amount: 0.8 }}
         className="mb-10 ml-6">
@@ -330,7 +333,7 @@ function convertToTimestamp(date:number):FirebaseDate  {
         </motion.li>
         <motion.li
         variants={cardVariants}
-        initial={{ opacity: 0 }}
+        initial={{ opacity: 0.5 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: false, amount: 0.8 }}
         className="mb-10 ml-6">

@@ -189,7 +189,14 @@
 *::-webkit-scrollbar {
   width: 15px;
 }
+*::-webkit-scrollbar-thumb {
+  background-color: var(--foreground); /* Change this color to the desired color */
+}
 
+/* Style the track of the scrollbar */
+*::-webkit-scrollbar-track {
+  background-color: var(--background); /* Change this color to the desired color */
+}
 
 
 
@@ -243,7 +250,10 @@
   -webkit-backdrop-filter: blur(4px);
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
+.green-box-shadow{
+  box-shadow: 0 8px 32px 0 rgba(136, 245, 125, 0.5) !important;
 
+}
 .gradient-03 {
   position: absolute;
   width: 400px;
@@ -277,12 +287,12 @@
 }
 
 .feedback-gradient {
-  position: absolute;
+  position: fixed;
   z-index:-1;
   width: 200px;
   height: 316px;
-  /* left: 0px;
-  top: 0px; */
+  bottom: 0px;
+  right: 300px;
 
   background: #8d39a3;
   filter: blur(175px);

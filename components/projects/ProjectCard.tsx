@@ -1,7 +1,7 @@
 import Beam from './Beam';
 import { motion } from 'framer-motion';
 import { convertFirebaseTimestampToJSDate } from './../../lib/utils';
-import {useState} from 'react';
+import { useState } from 'react';
 import Image from 'next/image';
 import { BadgeButton } from '../BadgeButton';
 
@@ -38,12 +38,14 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
         return <Image src="/tech/docker.png" fill alt="Docker" />;
       case 'github':
         return <Image src="/tech/github.png" fill alt="Github" />;
+      case 'framer':
+        return <Image src="/tech/framer.png" fill alt="Framer" />;
 
       default:
         return null;
     }
   }
-  const [selectedLine,setSelectedLine] = useState<number | null>(null);
+  const [selectedLine, setSelectedLine] = useState<number | null>(null);
   return (
     <div
       className="relative"
@@ -92,19 +94,24 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           <ul className="my-2 space-y-1">
             {project.description.map((des: string[], ind: number) => (
               <motion.li
-                onClick={()=>setSelectedLine(ind)}
-                className={`${selectedLine === ind ? '' : 'line-clamp-1' } cursor-pointer font-light dark:text-gray-300`}
+                onClick={() => setSelectedLine(ind)}
+                className={`${
+                  selectedLine === ind ? '' : 'line-clamp-1'
+                } cursor-pointer font-light dark:text-gray-300`}
                 key={ind}
                 initial={{ opacity: 0 }} // Initial opacity when the component mounts
                 animate={{ opacity: 1 }} // Opacity when the component is visible
-                exit={{opacity:0.5}}
+                exit={{ opacity: 0.5 }}
                 whileTap={{ scale: 0.95 }} // Scale down when clicked
               >
                 <motion.span
-                initial={{ rotate: 0 }}
-                animate={{ rotate: selectedLine === ind ? 90 : 0 }}
-                style={{ display: 'inline-block' }}
-                >&gt;</motion.span> {des}
+                  initial={{ rotate: 0 }}
+                  animate={{ rotate: selectedLine === ind ? 90 : 0 }}
+                  style={{ display: 'inline-block' }}
+                >
+                  &gt;
+                </motion.span>{' '}
+                {des}
               </motion.li>
             ))}
           </ul>

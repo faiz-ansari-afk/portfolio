@@ -103,4 +103,9 @@ export const technologies = [
       name: "Postgresql",
       icon: "/tech/postgresql.png",
     },
+    {
+      id:18,
+      name: "Framer Motion",
+      icon: "/tech/framer.png",
+    },
   ];

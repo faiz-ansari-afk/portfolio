@@ -1,15 +1,30 @@
 'use-client';
-import { motion, AnimatePresence } from 'framer-motion';
-// import Tech from './Skills3D/Tech';
-import { SkillsCard } from './Skills3D/SkillsCard';
+import { motion } from 'framer-motion';
+import SkillsNormal from './Skills3D/SkillsNormal';
+import { Caveat } from 'next/font/google';
 
+const caveat = Caveat({
+  subsets: ['latin'],
+  weight: ['400'],
+});
 const Home = () => {
   const summary = [
-    "Computer Science graduate with a knack for learning new coding languages in under a month.",
-          "Skilled in ReactJS for creating impressive front-end designs.",
-          "Effective communicator known for building strong relationships within teams.",
-          "Currently learning Docker to make front-end work even better."
-  ]
+    <span key="unique">
+      <span
+        className={`${caveat.className} text-3xl pr-1 text-gradient-black dark:text-gradient-reverse`}
+      >
+        Computer Science
+      </span>{' '}
+      graduate with a knack for learning new coding languages in under a month.
+    </span>,
+    'Skilled in ReactJS for creating impressive front-end designs.',
+    'Effective communicator known for building strong relationships within teams.',
+    <span key="uni">
+      Currently learning <span className="text-[#2496ED]">Docker</span> to
+      enhance my skills in creating, managing, and deploying applications within
+      isolated and reproducible environments.
+    </span>,
+  ];
   return (
     <>
       <motion.div key="home component">
@@ -29,21 +44,22 @@ const Home = () => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
         >
-          {summary.map(sum => (
-
-          <p key={sum} className=" global-text-color  text-xl my-2 tracking-wide  max-w-4xl">
-            <span className="text-foreground">&gt;&nbsp;</span>{sum}
-          </p>
+          {summary.map((sum,ind) => (
+            <p
+              key={ind}
+              className=" global-text-color  text-xl my-2 tracking-wide  max-w-4xl"
+            >
+              <span className="text-foreground">&gt;&nbsp;</span>
+              {sum}
+            </p>
           ))}
-          <h3 className=" global-text-color mt-32 text-4xl underline">
+          <h3 className=" global-text-color mt-32 text-3xl md:text-4xl ">
             Skills utilized till now:
           </h3>
-        
-        <div className=" p-3 max-w-4xl ">
-          {/* <div className="hidden dark:block -z-[100] absolute w-[100%] inset-0 gradient-03" /> */}
-          <SkillsCard />
-        </div>
         </motion.div>
+        <div className=" max-w-4xl ">
+          <SkillsNormal />
+        </div>
       </motion.div>
     </>
   );
