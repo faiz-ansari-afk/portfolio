@@ -72,10 +72,10 @@ export const SkillsCard = () => {
 
   return (
     <div
-      className="h-full w-full flex items-center     relative"
+      className="h-full w-full flex items-center  select-none   relative"
       onMouseDown={handleMouseDown}
       onMouseUp={() => setDragStart((prev) => ({ ...prev, isDragging: false }))}
-      onMouseMove={handleMouseMove}
+      // onMouseMove={handleMouseMove}
     >
       <div
         className=" overflow-x-scroll w-full h-full no-visible-scrollbar relative"

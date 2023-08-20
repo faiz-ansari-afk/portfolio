@@ -93,7 +93,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
             {project.description.map((des: string[], ind: number) => (
               <motion.li
                 onClick={()=>setSelectedLine(ind)}
-                className={`${selectedLine === ind ? '' : 'line-clamp-1' }  font-light dark:text-gray-300`}
+                className={`${selectedLine === ind ? '' : 'line-clamp-1' } cursor-pointer font-light dark:text-gray-300`}
                 key={ind}
                 initial={{ opacity: 0 }} // Initial opacity when the component mounts
                 animate={{ opacity: 1 }} // Opacity when the component is visible

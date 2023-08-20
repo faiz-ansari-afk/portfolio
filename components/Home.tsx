@@ -11,7 +11,7 @@ const Home = () => {
           "Currently learning Docker to make front-end work even better."
   ]
   return (
-    <AnimatePresence>
+    <>
       <motion.div key="home component">
         <motion.h1
           initial={{ opacity: 0, y: -200 }}
@@ -45,7 +45,7 @@ const Home = () => {
         </div>
         </motion.div>
       </motion.div>
-    </AnimatePresence>
+    </>
   );
 };
 

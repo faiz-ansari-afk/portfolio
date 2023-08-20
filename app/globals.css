@@ -96,7 +96,14 @@
     background-position: 100% 50%;
   }
 }
-
+/* .expborder::after{
+  content:"afteer";
+  display: inline-block;
+  background: var(--foreground);
+  border:1px solid var(--foreground);
+  width: 15px;
+  height: 3px;
+} */
 }
  
 @layer base {

@@ -74,7 +74,7 @@ const Page = () => {
         </motion.h2>
         {/* <div className="hidden dark:block -z-[100] absolute w-[100%] bottom-0 right-0 gradient-03" /> */}
       </motion.div>
-      <div className="hidden dark:lg:block -z-[100] overflow-hidden absolute  inset-0 gradient-03" />
+      <div className="hidden dark:lg:block -z-[100] overflow-hidden absolute  inset-0 gradient-04" />
       <div className="mt-12 relative grid grid-cols-1 lg:grid-cols-2 gap-12">
         {projects && projects.map((project:any, index:number) => (
           <ProjectCard key={index} project={project} />

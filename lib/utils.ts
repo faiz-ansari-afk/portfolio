@@ -13,7 +13,7 @@ export function convertFirebaseTimestampToJSDate(firebaseTimestamp:{
   const milliseconds = seconds * 1000 + nanoseconds / 1e6;
   const date = new Date(milliseconds);
 
-  const options = { year: "numeric", month: "short" };
+  const options:{year:string,month:string} = { year: "numeric", month: "short" };
   return new Intl.DateTimeFormat('en-US', options).format(date);
 }
 
