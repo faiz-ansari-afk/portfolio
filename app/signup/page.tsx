@@ -56,7 +56,7 @@ export default function Signup() {
     setConfirmPasswordError('');
 
     // Secret key validation
-    const secretKeyFromCompanyHead = 'asdf@951';
+    const secretKeyFromCompanyHead = process.env.NEXT_PUBLIC_SECRET_KEY;
     if (secretKey !== secretKeyFromCompanyHead) {
       setSecretKeyError('Invalid secret key');
       return;
