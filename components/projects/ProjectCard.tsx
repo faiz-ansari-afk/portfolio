@@ -40,6 +40,8 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
         return <Image src="/tech/github.png" fill alt="Github" />;
       case 'framer':
         return <Image src="/tech/framer.png" fill alt="Framer" />;
+      case 'typescript':
+        return <Image src="/tech/typescript.png" fill alt="Typescript" />;
 
       default:
         return null;
