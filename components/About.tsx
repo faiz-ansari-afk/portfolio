@@ -167,7 +167,7 @@ export const About = () => {
           initial={{ opacity: 0.3 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: false, amount: 0.8 }}
-          className="md:max-w-3xl font-light mb-16 tracking-wide leading-6"
+          className="md:max-w-3xl font-light mb-10 tracking-wide leading-6"
         >
           Thanks to my study background in Computer Science, I connect client
           requirements with real business goals while providing delightful user
@@ -229,7 +229,7 @@ export const About = () => {
         </motion.p>
         <h3 className="global-text-color">Why coding?</h3>
         <p className="">
-          <del>Passion</del>&nbsp;<del>Money</del>&nbsp;
+          <del>Passion🎃</del>&nbsp;<del>Money</del>&nbsp;
           <span className={`${caveat.className} text-2xl`}>Passion</span>
         </p>
       </div>
@@ -246,10 +246,11 @@ export const About = () => {
           Connect With Me
         </p>
         <div className="flex justify-center mt-6 gap-2">
+          
           <a
             href="https://twitter.com/mdfaiz_afk"
             target="_blank"
-            className="cursor-pointer border rounded-lg p-2 hover:shadow-md "
+            className="cursor-pointer dark:shadow-white border rounded-lg p-2 hover:shadow-md "
           >
             <Twitter />
           </a>
@@ -257,14 +258,14 @@ export const About = () => {
             <a
               href={`${aboutme[0].linkedin}`}
               target="_blank"
-              className="cursor-pointer border rounded-lg p-2 hover:shadow-md "
+              className="cursor-pointer dark:shadow-white border rounded-lg p-2 hover:shadow-md "
             >
               <Linkedin />
             </a>
           )}
           <a
             href="mailto:mdfaiz.afk@gmail.com"
-            className="cursor-pointer border rounded-lg p-2 hover:shadow-md "
+            className="cursor-pointer dark:shadow-white border rounded-lg p-2 hover:shadow-md "
           >
             <AtSign />
           </a>

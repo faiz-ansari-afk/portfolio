@@ -123,7 +123,7 @@ function convertToTimestamp(date:number):FirebaseDate  {
           transition={{ duration: 0.5 }}
           className="mb-12"
         >
-          <span className=" text-gradient text-3xl">Companies and organizations I stayed in.</span>
+          <span className=" text-gradient text-3xl">My Journey till now</span>
         </motion.div>
       </motion.div>
       <motion.ol 
@@ -141,7 +141,6 @@ function convertToTimestamp(date:number):FirebaseDate  {
                 modifyEndDate = exp.end_date as FirebaseDate;
               }
               const totalMonth = getTotalMonthExp(exp.start_date,modifyEndDate)
-              console.log("totalMonth",totalMonth);
             return(
             <motion.li 
             variants={cardVariants}
@@ -349,7 +348,7 @@ function convertToTimestamp(date:number):FirebaseDate  {
           <div className="p-4 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-700 dark:border-gray-600">
             <div className="items-start justify-between mb-3 sm:flex">
               <time className="mb-1 text-xs font-normal text-gray-400 sm:order-last sm:mb-0">
-                2005 - 2015
+                2015
               </time>
               <div className="text-sm font-normal text-gray-500 lex dark:text-gray-300">
                 <h3 className="text-2xl font-bold tracking-wide">S.S.C</h3>

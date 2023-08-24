@@ -32,7 +32,6 @@ const ThemeToggle = () => {
   useEffect(() => {
     const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
     const savedTheme = localStorage.getItem('theme');
-    console.log('savedTheme', savedTheme);
     if (savedTheme) {
       setTheme(savedTheme);
     } else {

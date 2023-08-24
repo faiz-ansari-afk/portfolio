@@ -15,7 +15,7 @@ const Home = () => {
       >
         Computer Science
       </span>{' '}
-      graduate with a knack for learning new coding languages in under a month.
+      graduate with a knack for learning new things and stay updated with market.
     </span>,
     'Skilled in ReactJS for creating impressive front-end designs.',
     'Effective communicator known for building strong relationships within teams.',

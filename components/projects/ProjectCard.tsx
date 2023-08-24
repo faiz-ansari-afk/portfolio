@@ -40,8 +40,6 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
         return <Image src="/tech/github.png" fill alt="Github" />;
       case 'framer':
         return <Image src="/tech/framer.png" fill alt="Framer" />;
-      case 'typescript':
-        return <Image src="/tech/typescript.png" fill alt="Typescript" />;
 
       default:
         return null;
@@ -60,12 +58,21 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
         whileInView="visible"
         viewport={{ once: true }}
         transition={{ duration: 1, delay: 0 }}
+        // variants={{
+        //   hidden: { opacity: 0, y: 0, scale: 1, rotateX: 45 },
+        //   visible: {
+        //     opacity: 1,
+        //     y: [0, -20, 0],
+        //     scale: [1, 1.2, 1],
+        //     rotateX: 0,
+        //   },
+        // }}
         variants={{
-          hidden: { opacity: 0, y: 0, scale: 1, rotateX: 45 },
+          hidden: { opacity: 0.1, y: 0, scale:0.8, rotateX: -10 },
           visible: {
             opacity: 1,
             y: [0, -20, 0],
-            scale: [1, 1.2, 1],
+            scale: 1,
             rotateX: 0,
           },
         }}
