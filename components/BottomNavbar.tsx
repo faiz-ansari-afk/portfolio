@@ -61,7 +61,7 @@ const BottomNavbar = () => {
   ];
   return (
     <div className="fixed  md:container border-t bottom-0  backdrop-blur-lg left-0 right-0 z-20 ">
-      <ul className="flex justify-between items-between md:hidden">
+      <ul className="flex justify-center items-center md:hidden">
         {MobOptions.map((opt, ind) => {
           return (
             <Link href={opt.goto} key={ind}>
