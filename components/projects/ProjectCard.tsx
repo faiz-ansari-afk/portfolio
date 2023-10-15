@@ -40,6 +40,8 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
         return <Image src="/tech/github.png" fill alt="Github" />;
       case 'framer':
         return <Image src="/tech/framer.png" fill alt="Framer" />;
+      case 'wordpress':
+        return <Image src="/tech/wordpress.webp" fill alt="Wordpress" />;
 
       default:
         return null;

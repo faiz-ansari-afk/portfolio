@@ -19,11 +19,7 @@ const Home = () => {
     </span>,
     'Skilled in ReactJS for creating impressive front-end designs.',
     'Effective communicator known for building strong relationships within teams.',
-    <span key="uni">
-      Currently learning <span className="text-[#2496ED]">Docker</span> to
-      enhance my skills in creating, managing, and deploying applications within
-      isolated and reproducible environments.
-    </span>,
+    
   ];
   return (
     <>

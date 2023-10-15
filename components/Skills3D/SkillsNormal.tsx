@@ -7,10 +7,10 @@ import StarWrapper from './SectionWrapper';
 
  const SkillsNormal = () => {
   return (
-    <div className='flex flex-wrap justify-between md:justify-start '>
+    <div className='flex flex-wrap justify-between md:justify-start  '>
         {cards.map((card, i) => (
           <motion.div
-            initial={{opacity:0, translateX:i%2===0 ? -50 : 50, translateY:-50}}
+            initial={{opacity:0, translateX: i%2===0 ? -50 : 50}}
             // animate={{opacity:1, translateX:0,translateY:0}}
             transition={{duration:0.3, delay: i * 0.12}}
             whileInView={{ opacity:1, translateX:0,translateY:0 }}

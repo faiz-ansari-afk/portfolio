@@ -108,4 +108,9 @@ export const technologies = [
       name: "Framer Motion",
       icon: "/tech/framer.png",
     },
+    {
+      id:19,
+      name: "Wordpress",
+      icon: "/tech/wordpress.webp",
+    },
   ];
